@@ -1,0 +1,6 @@
+#!/bin/bash
+DIR=`pwd`
+DOMAIN_NAME=`basename "$DIR"`
+export AWS_DEFAULT_PROFILE=`echo $DOMAIN_NAME | sed -e 's/\./\-/g'`
+aws configure --profile $AWS_DEFAULT_PROFILE
+aws s3 sync . s3://$DOMAIN_NAME --exclude ".*"

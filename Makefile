@@ -1,8 +1,10 @@
 DATE = $(shell date)
 .PHONY: run test upload
 
+all: release
 upload:
 	@./upload
+
 release:
 	@echo "Commit message:"
 	@read REPLY; \

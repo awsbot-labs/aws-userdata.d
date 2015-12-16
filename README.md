@@ -2,7 +2,11 @@
 A set of bash scripts and mechanism to download them for bootstrapping AWS instances.
 
 ## Getting started
-This is a very simple mechanism that allows an EC2 instance to download a set of scripts from an S3 bucket, and run those scripts launch. hence boot strapping the instance with predefined packages config files etc.
+This is a very simple mechanism that allows an EC2 instance to download a set of scripts from an S3 bucket, and run those scripts at launch.
+
+Hence boot-strapping the instances with predefined packages, config files and service configurations etc, but with minimal per-instance userdata configuration.
+
+So to update all instances with a new package all you would do is author the script and then upload it to S3 - any newly launched instances should then run the new script.
 
 ## How it works?
 An S3 bucket in Amazon hosts the scripts which are available to download from Authentcated users in the Amazon account. Alternatively you could make the bucket public, but make sure the scripts are sanitized.

@@ -11,7 +11,7 @@ So to update all instances with a new package all you would do is author the scr
 ## How it works?
 An S3 bucket in Amazon hosts the scripts which are available to download from Authentcated users in the Amazon account. Alternatively you could make the bucket public, but make sure the scripts are sanitized.
 
-The mechanism to download and piep to bash is:
+The mechanism to download and pipe to bash is:
 ```
   #!/bin/bash -x
   # The bucket containing the userdata.d
